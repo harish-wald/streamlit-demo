@@ -30,7 +30,7 @@ def run_prompt():
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a privacy expert skilled in detecting data leaks"},
+            {"role": "system", "content": ""},
             {"role": "user", "content": few_shot_prompt}
             ]
             )
