@@ -21,6 +21,8 @@ few_shot_prompt = """Classify following input as confidential or non-confidentia
     I need to convert a Dolby Vision XML from 24 to 25 fps. What's the command? > non-confidential
     What is coca colas stock symbol? > non-confidential
     Where is Intel's headquarters based? > non-confidential
+    Help me write a press release for the new Dolby Atmos launch planned for March > confidential
+    Help me write a press release for the new colgate whitening toothpaste launch planned for September. It has unique anticavity, antigingivitis, antisensitivity toothpaste formula helps interfere with the harmful effects of plaque bacteria associated with gingivitis for healthy gums > confidential
     """
 
 few_shot_prompt = few_shot_prompt + input + ' >'
