@@ -25,7 +25,7 @@ few_shot_prompt = """Classify following input as confidential or non-confidentia
     "Help me write a press release for the new colgate whitening toothpaste launch planned for September. It has unique anticavity, antigingivitis, antisensitivity toothpaste formula helps interfere with the harmful effects of plaque bacteria associated with gingivitis for healthy gums" > "confidential"
     """
 
-few_shot_prompt = few_shot_prompt + '\n"'input + '" >'
+few_shot_prompt = few_shot_prompt + '\n"'+ input + '" >'
 
 
 def run_prompt():
