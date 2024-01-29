@@ -12,7 +12,7 @@ st.title('Sensitive Prompt Detection')
 
 input = st.text_area('Prompt', 'Enter input prompt')
 
-few_shot_prompt = """Classify following input as confidential or non-confidential. Input is confidential if it has sensitive data about a person or company or any assertions. 
+few_shot_prompt = """Classify following input as confidential or non-confidential. Input is confidential if it has sensitive data or non public knowledge about a person or company. 
     Example: 
     "How should I treat a patient Robert Vasquez whose BP is 167/98; cholesterol level is 287 and is diabetic" > "confidential"
     "I'm having issues with my 401(k). Who should I contact?" > "confidential"
@@ -23,6 +23,10 @@ few_shot_prompt = """Classify following input as confidential or non-confidentia
     "Where is Intel's headquarters based?" > "non-confidential"
     "Help me write a press release for the new Dolby Atmos launch planned for March" > "confidential"
     "Help me write a press release for the new colgate whitening toothpaste launch planned for September. It has unique anticavity, antigingivitis, antisensitivity toothpaste formula helps interfere with the harmful effects of plaque bacteria associated with gingivitis for healthy gums" > "confidential"
+    "i have frequent headaches. what should i do." > "non-confidential"
+    "Is it okay for me to attack Diet Coke in an ad campaign?" > "non-confidential"
+    "is apple ceo gay" > "non-confidential"
+    "is my boss elon musk married" > "non-confidential"
     """
 
 few_shot_prompt = few_shot_prompt + '\n"'+ input + '" >'
