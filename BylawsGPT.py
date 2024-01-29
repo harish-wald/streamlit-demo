@@ -62,10 +62,10 @@ query_engine = index.as_query_engine()
 
 st.title('Magna Majestic Meadows ByLaws GPT')
 
-query = st.text_area('Query', 'Enter your query)
+query = st.text_area('Query', 'Enter your query')
 
 def run_prompt():
     st.subheader('Output: ')
     st.write(query_engine.query(query))
-    
+
 st.button('Run', on_click=run_prompt)
