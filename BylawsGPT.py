@@ -68,6 +68,6 @@ query = st.text_area('Query', 'Enter your query')
 
 def run_prompt():
     st.subheader('Output: ')
-    st.write(query_engine.query(query))
+    st.write(query_engine.query(query).response)
 
 st.button('Run', on_click=run_prompt)
