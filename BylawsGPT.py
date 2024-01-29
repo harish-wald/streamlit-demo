@@ -50,7 +50,7 @@ import openai
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-PDFReader = download_loader("PDFReader")
+PDFReader = download_loader("PDFReader",custom_path="local_dir")
 
 loader = PDFReader()
 
