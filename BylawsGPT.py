@@ -45,6 +45,7 @@
 from pathlib import Path
 from llama_index import download_loader, VectorStoreIndex
 import os 
+import streamlit as st
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
