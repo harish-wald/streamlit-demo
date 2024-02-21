@@ -61,6 +61,8 @@ def run_prompt():
         merged_list.append(result)
 
     for result in merged_list:
+        if 'entity' not in result:
+            continue
         print(result)
         word = result["word"]
         print(word)
