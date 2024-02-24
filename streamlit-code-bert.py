@@ -16,14 +16,13 @@ def load_model():
 
 @st.cache_resource
 def load_tokenizer():
-	  return AutoTokenizer.from_pretrained("Harish-wald/code-bert")
+	  return AutoTokenizer.from_pretrained("Harish-wald/code-bert",token="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")
 
 model = load_model()
 
 model.eval()
 
 tokenizer = load_tokenizer()
-
 def run_prompt():
     tokenized_input = tokenizer([input], padding="max_length", truncation=True,return_tensors='pt')
     output = model.forward(**tokenized_input)
