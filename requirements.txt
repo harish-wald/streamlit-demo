@@ -1,7 +1,3 @@
-openai
-llama-index
-mypy
-pypdf
 transformers
 torch
 streamlit
