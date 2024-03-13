@@ -12,11 +12,11 @@ input = st.text_area('Prompt', 'Enter input prompt')
 # NOTE: Don't set ttl or max_entries in this case
 @st.cache_resource
 def load_model():
-	  return AutoModelForSequenceClassification.from_pretrained("Harish-wald/code-bert",token="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", num_labels=2)
+	  return AutoModelForSequenceClassification.from_pretrained("Harish-wald/code-bert",token="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", num_labels=2).eval()
 
 @st.cache_resource
 def load_tokenizer():
-	  return AutoTokenizer.from_pretrained("Harish-wald/code-bert",token="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").eval()
+	  return AutoTokenizer.from_pretrained("Harish-wald/code-bert",token="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")
 
 model = load_model()
 
